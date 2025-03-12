@@ -23,7 +23,6 @@ def find_anagrams(s, p):
             window_count[s[i]] = 0
         window_count[s[i]] += 1
 
-    # Slide the window over s
     while end < len(s):
         if window_count == char_count:
             indices.append(start)
