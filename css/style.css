@@ -15,6 +15,16 @@
 * {
     margin: 0;  /* Remove this to see what happens. If you even care. */
     padding: 0;  /* Most elements don't have a default padding value. Unlike margin. Removing this won't make a difference. */
+    
+    /* box-sizing: border-box;  IMPORTANT: this line is a big deal, removing it wont affect anything though
+    (aside from the contact form modal) which is why i needed to add it 
+    I really cant describe it on a comment, i would have to draw it. remind me. 
+    (i prob wont forget and will have a drawing ready to show you tuesday so remind me to show you
+    note for myself when i explain it to you so u can explain it . padding is applied inward, not outward. technically
+    actually you probably shouldnt mention this. but if the professor asks and i didnt tell 
+    you before hand, youre screwed. so yea
+    /* nvm i dont need it... i typed all that for nothing. im just wasting your time. are you sitll reading this. no way. dumbahh jit */
+    
 }
 
 body {
@@ -81,12 +91,9 @@ ul a:hover {
 Height auto is used to maintain dimensions / ratio */
 
 /* Delete this and the div tag in the html when no longer needed */
-div {
-    margin: 25px auto;
-    height: 100px;
-    width: 100px;
-    border: 5px solid black;
-}
+
+
+/* FOOTER */
 
 footer {
     border-top: 1px solid black;
@@ -109,6 +116,54 @@ footer a:hover {
     text-decoration-style: wavy;
 }
 
+/* IMPORTANT: i did not do media quesries to make this form get smaller when shrinking screen.
+it probably wouldnt be hard. actually this comment is outdated. but this is for future me possibly.  */
+
+.form-container {
+    /* the fieldset is there, but we cant see it. if you delete pointer-events,
+    you can hover over the center and see your cursor change bc its detecting the visible content.
+    very interesting wow */
+    opacity: 0;
+    pointer-events: none;
+
+    width: 400px;
+    border: 10px solid var(--dark-pink);
+    padding: 25px;
+    /* 
+    Fixed removes the element from the document flow, allowing it to overlap on other items. 
+    if basically takes up no space and does not exist to the elements on the doc flow.
+    this is a very simple explanation, The more you explain the better for obvious reasons
+    Top and Left at 50% place the top left corner of the div at the very center of the page, 
+    but thats not the center of the actual div and its also not what we want. so transform fixes that
+    */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+.form-container:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+fieldset a {
+    text-decoration: none;
+    background-color: var(--light-pink);
+    color: black;
+
+    display: inline-block;
+
+    margin-top: 25px;
+    border: 2px solid var(--dark-pink);
+    padding: 10px 25px;
+    
+}
+
+
+
+
+/* END FOOTER */
 
 /* Tablet */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
