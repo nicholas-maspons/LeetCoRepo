@@ -1,0 +1,424 @@
+:root {
+    --dark-pink: #eadada;
+    --light-pink: #f2ebe5;
+    --almost-white: #FEFAEE;
+    --grey: #887c7c;
+  }
+  
+  * {
+    margin: 0;  
+    padding: 0;  
+    
+    
+  }
+  
+  body {
+    background-color: var(--light-pink);
+    color: #887c7c;
+  }
+  
+  header {
+    background-color: var(--dark-pink);
+    border-bottom: 1px solid #887c7c; 
+  
+  
+    padding: 25px 0px;
+  }
+  
+  
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* width: 100%; */
+    padding: 0 20px;
+  }
+  
+  .header-image-container img {
+    width: 100px; 
+    height: auto; 
+  }
+  
+  .header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  text-align: center;
+  }
+  
+  .header-logo img {
+  width: 300px; 
+  height: 60px;
+  }
+  
+  /* .NavBar {
+  margin-left: auto; 
+  } */
+  
+  .NavBar ul {
+    list-style: none;
+    display: flex;
+    /* gap: 20px; */
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  /* .NavBar a {
+    text-decoration: none;
+    color: #887c7c;
+    font-weight: bold;
+  } */
+  
+  .NavBar li a {
+  color: #887c7c; /* match your theme color */
+  font-weight: 500;
+  }
+  
+  .cart-container {
+  margin-left: 20px;
+  display: flex;
+  
+  }
+  
+  .cart-icon {
+  width: 30px; 
+  height: 30px;
+  cursor: pointer;
+  }
+  
+  .section.hero {
+  width: 100vw;
+  overflow-x: hidden;
+  /* padding and margin 0 arent needed since we declared this at the start inside of *{}. this goes for all instances. less things to look through */
+  padding: 0;
+  margin: 0;
+  }
+  
+  .section.hero .container {
+  width: 100vw;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+  
+  .has-scrollbar {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  }
+  
+  .has-scrollbar::-webkit-scrollbar {
+  display: none;
+  }
+  
+  .scrollbar-item {
+  flex: 0 0 100vw; 
+  scroll-snap-align: start;
+  position: relative;
+  }
+  
+  .hero-card {
+  width: 100vw;
+  height: 100vh; 
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  }
+  
+  .card-content {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  color: #FEFAEE;
+  background: rgba(148, 139, 139, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  
+  .hero-text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-primary {
+    background-color: #706764;
+    color: #FEFAEE;
+  }
+  
+  .btn-primary:hover {
+    background-color: #82746f;
+  }
+  
+  .brand {
+    padding-left: 25px;
+    font-size: 40px;
+  }
+  
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  li {
+    width: 150px;
+    text-align: center;
+  }
+  
+  header a {
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--grey);
+  }
+  
+  ul a:hover {
+    text-decoration: underline;  
+    text-decoration-style: wavy; 
+  }
+  
+  footer {
+    border-top: 1px solid #887c7c;
+    background-color: var(--dark-pink);
+    /* color: var(--almost-white); */
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0px;
+  }
+  
+  footer a {
+    text-decoration: none;
+    color: #887c7c;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+  }
+  
+  .form-container {
+  
+    opacity: 0;
+    pointer-events: none;
+  
+    width: 400px;
+    border: 10px solid var(--dark-pink);
+    padding: 25px;
+  
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  }
+  
+  /* This basicaly says 
+  "when an element with a targeted id had this class applied to them, 
+  apply the styles below" */
+  .form-container:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  fieldset a {
+    text-decoration: none;
+    background-color: var(--light-pink);
+    color: black;
+  
+    display: inline-block;
+  
+    margin-top: 25px;
+    border: 2px solid var(--dark-pink);
+    padding: 10px 25px;
+    
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    padding: 20px;
+    text-align: center; 
+  }
+  
+  .Item img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+  }
+  
+  .Item img {
+    width: 100%; 
+    max-width: 150px;
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .Item:nth-child(1):hover img { content: url("./img/texture1.png"); }
+  .Item:nth-child(2):hover img { content: url("./img/texture2.png"); }
+  .Item:nth-child(3):hover img { content: url("./img/texture3.png"); }
+  .Item:nth-child(4):hover img { content: url("./img/texture4.png"); }
+  .Item:nth-child(5):hover img { content: url("./img/texture5.png"); }
+  .Item:nth-child(6):hover img { content: url("./img/texture6.png"); }
+  
+  .Item p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  footer ul li {
+  color: #887c7c;
+  }
+  
+  footer p {
+  color: #887c7c;
+  }
+  
+  .menu-toggle {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--grey);
+  }
+  
+  .mobile-menu {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    top: 80px; 
+    right: 20px;
+    background-color: var(--light-pink);
+    border: 1px solid var(--grey);
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 1000;
+    width: 200px;
+    text-align: right;
+  }
+  
+  .mobile-menu:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  }
+  
+  .mobile-menu li {
+  margin-bottom: 10px;
+  text-align: right;
+  }
+  
+  .mobile-menu a {
+  color: var(--grey);
+  text-decoration: none;
+  font-weight: bold;
+  }
+  
+  .cart-icon-small {
+  width: 25px;
+  height: auto;
+  }
+  
+  /* this media query already exists down below. i moved the code there. delete this
+  @media screen and (max-width: 767px) {
+    .NavBar, .cart-container {
+        display: none;
+      }
+    
+      .menu-toggle {
+        display: block;
+      }    
+  } 
+  */
+  /* MEDIA QUERY */
+  
+  /* Tablet */
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  
+    header {
+        padding: 20px 0px;
+    }
+    .brand {
+        padding-left: 20px;
+        font-size: 32px;
+    }
+    li {
+        width: 125px;
+    }
+    header a {
+        font-size: 20px;       
+    }
+    .mobile-menu.active {
+      display: block;
+    }
+  }
+    
+  /* Phone */
+  @media only screen and (max-width: 767px) {
+  
+    header {
+        padding: 15px 0px;
+    }
+    .brand {
+        padding-left: 15px;
+        font-size: 24px;
+    }
+    li {
+        width: 100px;
+    }
+    header a {
+        font-size: 15px;       
+    }
+    .mobile-menu.active {
+      display: block;
+    }
+      .NavBar, .cart-container {
+    display: none;
+  }
+  
+  .menu-toggle {
+    display: block;
+  
+  }
+  }

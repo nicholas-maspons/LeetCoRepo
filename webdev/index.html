@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thnk Skn</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="shortcut icon" href="./img/favicon1.png" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Ms+Madi&display=swap" rel="stylesheet">
+</head>
+
+<header class="header">
+  <div class="header-container">
+
+    <div class="header-image-container">
+      <img src="img/THNKSKN-Web-Logo.png" alt="Logo">
+    </div>
+
+    <div class="header-logo">
+      <img src="img/logo.png" alt="Logo" class="Logo Image">  
+    </div>
+    
+    <nav class="NavBar">
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="#Account">Account</a></li>
+          <li><a href="index.html">About</a></li>
+      </ul>
+    </nav>
+
+    <div class="cart-container">
+      <img src="img/cart.png" alt="Cart" class="cart-icon">
+    </div>
+    <a href="#mobile-menu" class="menu-toggle" aria-label="Open Menu">&#9776;</a>
+
+    <div id="mobile-menu" class="mobile-menu">
+       <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="#Account">Account</a></li>
+          <li><a href="index.html">About</a></li>
+          <li><a href="cart.html"><img src="img/cart.png" alt="Cart" class="cart-icon-small"></a></li>
+          <li><a href="#" class="close-menu">Close</a></li> 
+        </ul>
+    </div>
+   
+  </div>
+</header>
+
+<body>
+
+<section class="section hero" id="home" aria-label="hero" data-section>
+  <div class="container">
+    <ul class="has-scrollbar">
+      <li class="scrollbar-item">
+        <div class="hero-card has-bg-image" style="background-image: url('./img/hero-banner-1.png')">
+          <div class="card-content">
+            <h1 class="h1 hero-title">Reveal The <br> Beauty of Skin</h1>
+            <p class="hero-text">Made using clean, non-toxic ingredients, our products are designed for everyone.</p>
+            <p class="price">Starting at $15.00</p>
+            <a href="products.html" class="btn btn-primary">Shop Now</a>
+          </div>
+        </div>
+      </li>
+      <li class="scrollbar-item">
+        <div class="hero-card has-bg-image" style="background-image: url('./img/hero-banner-2.png')">
+          <div class="card-content">
+            <h1 class="h1 hero-title">Reveal The <br> Beauty of Skin</h1>
+            <p class="hero-text">Made using clean, non-toxic ingredients, our products are designed for everyone.</p>
+            <p class="price">Starting at $15.00</p>
+            <a href="products.html" class="btn btn-primary">Shop Now</a>
+          </div>
+        </div>
+      </li>
+      <li class="scrollbar-item">
+        <div class="hero-card has-bg-image" style="background-image: url('./img/hero-banner-3.png')">
+          <div class="card-content">
+            <h1 class="h1 hero-title">Reveal The <br> Beauty of Skin</h1>
+            <p class="hero-text">Made using clean, non-toxic ingredients, our products are designed for everyone.</p>
+            <p class="price">Starting at $15.00</p>
+            <a href="products.html" class="btn btn-primary">Shop Now</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+</body>
+
+      <footer>
+        <p class="brand">THNK SKN&trade;<span style="font-size: 10px;">&reg;&copy;</span></p>
+        <ul>
+            
+            <li>Terms of Service</li>
+            <li>Cookie Preferences</li>
+            <li><a href="#form-opened">Contact Us</a></li>
+            <li><a href="#Instagram">Instagram</a></li>
+            <li><a href="#Twitter">Twitter</a></li>
+            <li><a href="#Pinterest">Pinterest</a></li>
+        </ul>
+   
+      </footer>
+
+        <fieldset id="form-opened" class="form-container">
+          <label for="FirstName">First Name</label>
+          <input type="text" name="FirstName" id="FirstName" placeholder="Jane" required>
+          <br>
+          <label for="LastName">Last Name</label>
+          <input type="text" name="LastName" id="LastName" placeholder="Smith" required>
+          <br>
+          <label for="Email">Email</label>
+          <input type="email" name="Email" id="Email" placeholder="netID@nyu.edu" required>
+          <br>
+          <label for="Message">Message</label>
+          <textarea name="Message" id="Message" cols="50" rows="10" placeholder="Your message" required></textarea>
+          
+          
+          <a href="#form-closed">Cancel</a>
+          <a href="#form-closed">Send</a>
+
+        </fieldset>
+
+</html>
+  
